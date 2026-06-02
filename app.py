@@ -1,4 +1,12 @@
-import os
+import streamlit as st          # Il framework principale per creare l'applicazione web
+import streamlit.components.v1 as components  # Fondamentale per incorporare il tuo file HTML/JS personalizzato
+import json                     # Per gestire lo scambio di dati (payload) in formato JSON con il frontend
+import os                       # Per verificare la presenza dei file e gestire i percorsi sul tuo Mac
+import time                     # Per gestire le temporizzazioni e simulare i timestamp dei log
+import datetime                 # Per formattare correttamente le date dei pazienti e dei turni
+import random                   # Utile se vuoi simulare lo spostamento automatico del GPS dell'ambulanza
+import math                     # Per eventuali calcoli geometrici sulle coordinate GPS
+import hashlib                  # Cruciale per generare gli hash SHA-256 finti o reali per l'Audit Trail del GDPR
 
 # Definiamo il percorso corretto per il tuo Mac
 path = os.path.expanduser("~/ARGO_SaaS/argo_ui.html")
